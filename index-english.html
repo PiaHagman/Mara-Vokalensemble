@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+ <html lang="sv"> 
+ <head>
+   <meta charset="utf-8">
+
+   <!--Koden nedan talar om för webbläsaren att enhetens skärmbredd ska 
+   användas och att sidan inte ska zoomas in när sidan laddas första gången.-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Länk till css-fil-->
+   <link rel="stylesheet" type="text/css" href="css_mara.css">
+   <!--Font rubriker google fonts-->
+   <link rel="preconnect" href="https://fonts.gstatic.com"> 
+   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800;900&display=swap" rel="stylesheet">
+    <!--Font body google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" 
+    rel="stylesheet">
+   
+   <title>Mara Vokalensemble</title>
+ </head>
+ <body>
+<!--Header byggd med flexbox-->
+     <header>
+      <div class="headercontainer">
+         <div>
+            <a href="index.html">
+               <img src="images/logga.png" alt="Logotype Mara Vokalensemble" class="huvudlogga">
+            </a>
+         </div>
+         <div id="engelsk">
+               <a href="index.html">
+                  <img src="images/flagga_sve.png" alt="Translate site to Swedish" class="flagga-sv"><br>Swedish
+               </a>
+         </div>
+      </div>
+    </header>
+     
+<!--Meny-->
+<nav id="meny">
+   <!-- [THE HAMBURGER] -->
+   <label for="hamburger">&#9776;</label>
+   <input type="checkbox" id="hamburger"/>
+
+    <ul id="menucontainer">
+       <li><a class="active" href="index.html">Home</a></li> <!--class=active: menyalternativet för den sida man är på visas med liten annan bakgrundsfärg-->
+       <li class="dropdown" >
+          <a href="javascript:void(0)" id="omoss-link">About us</a> <!--Säkerställer att sidan inte laddas om eller navigerar till annan sida.-->
+           <div class="dropdown-content">
+              <a href="koren.html" id="koren-link">The choir</a>
+              <a href="repertoar.html" id="repertoar-link">Repertoire</a>
+           </div></li>
+       <li><a href="fotogalleri.html">Photo Gallery</a></li>
+       <li><a href="konserter.html">Conserts/Events</a></li>
+       <li><a href="kontakt.html">Booking/Contact</a></li>
+    </ul>
+</nav>
+
+<!--Flexbox container med items-->
+     <div class="container">
+      <div class="valkomstbild-box"><img src="images/mara.jpg" alt="Fotografi av Mara" class="valkomstbild"></div>
+     </div>
+     
+<!--Första raden-->
+    <div class="container">
+        <div class="valkommen">
+           <h1>Hi! We are MARA.</h1>
+        </div>
+        <div class="valkomsttext">
+           <p>MARA consists of 20 female voices formed in the autum of 2010. We are a group of young women who have extensive experience of
+               choir singing. Our ambition is high and we prefer creative difficult compositions. Preferably in a modern genre. <b> Always striving to give
+                the audience a holistic experience of choir singing at its best!</b></p>
+        </div>
+     </div>
+<!--Andra raden-->
+     <div class="container">
+      <div class="boka">
+         <h2>Booking</h2>
+         <p><b>The rest of this site is in Swedish</b>! Please contact us through our social medias or by 
+            <a href="mailto:maravokal@gmail.com"><b>sending us an email</b></a>.</p>
+      </div>
+      <div class="video">
+         <!--Ny container för att styra iframe placering-->
+         <div class="iframe-container">
+            <div>
+               <iframe src="https://www.youtube.com/embed/2d8rohKzU8Y" 
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+               picture-in-picture" allowfullscreen title="Youtube-video från Ljuskonsert 3/12/2017"></iframe> 
+            </div>
+         </div>
+      </div>
+      <div class="folj">
+         <h2>Follow us</h2>
+         <!--Ny container med sociala medier-länkar-->
+         <div class="container">
+            <div class="facebook">
+               <a href="https://www.facebook.com/maravokalensemble" target="_blank">
+                  <img src="images/facebook-logo.png" alt="Genväg till Maras Facebook">
+               </a>
+            </div>
+            <div class="instagram">
+               <a href="https://www.instagram.com/maravokalensemble/" target="_blank">
+                  <img src="images/instagram-logo.png" alt="Genväg till Maras Instagram">
+               </a>
+            </div>
+         </div>
+         <div class="youtube">
+            <a href="https://www.youtube.com/channel/UC2TkiMb97JdWYj0rifrgBQw" target="_blank">
+               <img src="images/youtube-logo.png" alt="Genväg till Maras Youtube-kanal">
+           </a>
+         </div>
+         </div>
+      </div>
+     <!--Footer-->
+     <footer>
+      <h2>Contact!</h2>
+      <p><b>Mara Vokalensemble  |  <a href="mailto:maravokal@gmail.com">maravokal@gmail.com</a></b></p>
+      <hr id="line">
+      <br>
+        <a id="sensus" href="https://www.sensus.se/" target="_blank">Mara Vokalensemble is a member of Sensus</a> 
+      <br>
+       <p id="signatur">&copy; Pia Hagman 2021</p>
+   </footer>
+</body>
+</html>

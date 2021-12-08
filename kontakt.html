@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+ <html lang="sv">
+ <head>
+   <meta charset="utf-8">
+
+   <!--Koden nedan talar om för webbläsaren att enhetens skärmbredd ska 
+   användas och att sidan inte ska zoomas in när sidan laddas första gången.-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Länk till css-fil-->
+   <link rel="stylesheet" type="text/css" href="css_mara.css">
+   <!--Font rubriker google fonts-->
+   <link rel="preconnect" href="https://fonts.gstatic.com"> 
+   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800;900&display=swap" rel="stylesheet">
+    <!--Font body google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" 
+    rel="stylesheet">
+    <title>Kontakt - Mara Vokalensemble</title>
+  </head>
+  <body>
+      <header>
+         <div>
+             <a href="index.html">
+                <img src="images/logga.png" alt="Logga Mara Vokalensemble" class="huvudlogga">
+             </a>
+         </div>
+      </header>
+     
+<!--Meny-->
+<nav id="meny">
+  <!-- [THE HAMBURGER] -->
+  <label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
+
+   <ul id="menucontainer">
+      <li><a href="index.html">Hem</a></li> <!--class=active: menyalternativet för den sida man är på visas med liten annan bakgrundsfärg-->
+      <li class="dropdown" >
+         <a href="javascript:void(0)" id="omoss-link">Om oss</a> <!--Säkerställer att sidan inte laddas om eller navigerar till annan sida.-->
+          <div class="dropdown-content">
+             <a href="koren.html" id="koren-link">Kören</a>
+             <a href="repertoar.html" id="repertoar-link">Repertoar</a>
+          </div></li>
+      <li><a href="fotogalleri.html">Fotogalleri</a></li>
+      <li><a href="konserter.html">Konserter/Events</a></li>
+      <li><a href="kontakt.html" class="active">Boka oss/Kontakt</a></li>
+   </ul>
+</nav>
+
+<!--Första raden-->
+<div class="kontakt-container">
+  <div class="bildbox">
+    <div class="bild-container3"> <!--Extra container för att göra bakgrunsfärg-->
+      <div>
+        <img src="images/hej.jpg" alt="" class="bild-hej">
+      </div>
+    </div>
+  </div>
+
+<div class="formularbox">
+  <h1>Boka oss</h1>
+      <!--Här börjar formuläret.-->
+  <form method="post" action="mailto:maravokal@gmail.com" enctype="text/plain">      
+      <!--Drop down list box - vilken typ av bokning-->
+      <!--Label-taggen är användbar för skärmläsare som läser ut värdet högt när användaren ställer markören i det specifika elementet. 
+        Även texten bredvid exempelvis radioknappar blir klickbar.-->
+    <div>
+      <label for="bokning">Typ av bokning:</label><br>
+        <select name="bokning" id="bokning">
+            <option>Välj...</option>
+            <option value="foretagsgig">Företagsgig</option>
+            <option value="privat">Privat fest/event</option>
+            <option value="lucia">Luciatåg</option>
+            <option value="konsert">Konsert</option>
+            <option value="annat">Annan bokning</option>
+        </select>
+    </div>
+    <!--Datum-->
+    <div>
+       <label for="bokningsdatum">Datum för bokning:</label><br>
+       <input type="date" name="bokningsdatum" id="bokningsdatum">  
+    </div>
+    <!--Text input-->
+    <div>
+       <label for="namn">Namn + ev företag/organisation:</label><br>
+       <input type="text" name="namn" id="namn" required/>
+    </div>
+    <div class="container">
+       <div class="epost">
+          <label for="epost">E-postadress:</label><br>
+          <input type="email" name="epost" id="epost" required/>
+       </div>
+        <div class="telefon">
+          <label for="telefon">Telefonnummer:</label> <br> 
+          <input type="text" name="telefon" id="telefon" required/>
+        </div>
+    </div>
+    <div>
+      <label for="meddelande">Meddelande:</label><br>
+      <textarea name="meddelande" id="meddelande"></textarea>
+    </div>
+    <!--Submit knapp-->
+    <div>
+      <input type="submit" name="skicka" value="Skicka" id="submit" />
+    </div>  
+</form>
+</div>
+</div>
+
+<!--Andra raden-->
+<div class="kontakt-container">
+  <div class="adress">
+    <h2>Hör av dig!</h2>
+      <p><a href="mailto:maravokal@gmail.com">maravokal@gmail.com</a></p>
+      <h3>Kontaktperson:</h3>
+         <p>Ordförande Rebeca de Souza </p>
+    
+    <h2>Vill du sjunga med oss?</h2>
+    <p>Vi tar oftast in nya medlemmar enligt devisen <i>en in - en ut</i>. Håll utkik på vår Instagram och Facebook när det finns lediga platser. 
+      Du kan såklart alltid skicka ett intressemejl till oss även däremellan så vet vi att du finns.</p>
+    </div>
+    <div class="formularforklaring">
+      <h2>Hur?</h2>
+        <p>Kontakta oss via formuläret ovan eller direkt til vår mejladress eller via vår kontaktperson. Vi återkommer så snart vi kan 
+        med ett förslag på upplägg och pris.</p>
+      <h2>Vad och till vilket pris?</h2> 
+        <p>Vi gör allt från enkla gig, där endast ett fåtal av oss medverkar, till gig i helkör i de 
+          stora salongerna. Från ett par låtar till ett helt konsertprogram. I Göteborg eller någon annanstans.Vi gillar galna upptåg likaväl som seriösa tillställningar. 
+          Vår <a href="repertoar.html">repertoar</a> är bred och vi hittar utan tvekan ett koncept som passar just dig. Vår prislapp styrs av antal medverkande, antal 
+          inslag och mängden förberedelser som krävs. Kolla gärna in vår <a href="https://www.youtube.com/channel/UC2TkiMb97JdWYj0rifrgBQw" target="blank">
+          Youtube-kanal </a> för att få en inblick i vår bredd. </p>
+  </div>
+</div>
+
+
+<!--Footer-->
+    <footer>
+      <h2>Kontakt</h2>
+      <p><b>Mara Vokalensemble  |  <a href="mailto:maravokal@gmail.com">maravokal@gmail.com</a></b></p>
+      <hr id="line">
+      <br>
+        <a id="sensus" href="https://www.sensus.se/" target="_blank">Mara Vokalensemble är medlem i Studieforbundet Sensus</a> 
+      <br>
+       <p id="signatur">&copy; Pia Hagman 2021</p>
+   </footer>
+</body>
+</html>

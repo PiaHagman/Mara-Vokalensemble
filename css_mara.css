@@ -1,0 +1,776 @@
+/*Generell CSS för alla sidor------------------------------------------------------------------------------------------------*/
+* {
+    box-sizing: border-box; /* Räknar in border och padding i elementens storlek */
+ }
+ /*Design body. */
+ body {
+    width: 80%; /*Innehållet på sidan tar upp 80% av webbläsarfönstret.*/ 
+    max-width: 1200px; /*men den blir aldrig större än 1200px.*/
+    margin: 10px auto; /*marginal 10px utrymme uppåt och nedåt och är centrerad horisontellt (margin: 10px auto)*/
+    background-color: #fff; /*Bakgrundfärg sätts till vit för att webbläsaren inte ska hitta på något annat*/
+    color: black; /*Text-färg*/
+ }
+ h1 {
+    font-family:'Catamaran', sans-serif; /*Har importerats i HTML-dokumentets head*/
+    font-size: 300%;
+    line-height: 100%;
+ }
+ h2 {
+   font-family:'Catamaran', sans-serif;
+   font-size: 180%;
+}
+ p {
+   font-family: 'Karla', sans-serif;
+   line-height: 150%;
+   font-size: 100%;
+ }
+
+ /*Design header*/ 
+ header {  
+   padding: 25px 0px; /*top and bottom paddings är 25px, höger och vänster paddings är 0px*/
+ }
+.huvudlogga{
+width: 100%;
+max-width: 400px;
+}
+/*Responsiv design för header*/
+@media all and (max-width: 1000px){
+   body {
+      width: 90%;
+   }
+}
+@media all and (max-width: 900px) {
+    .container {
+      flex-direction: column; 
+      text-align: center;
+      align-content: center;
+    }
+   }
+
+/*MENY*/
+#meny {
+   width: 100%;
+}
+/* Dölj hamburgermenyn */
+#meny label, #hamburger { display: none; }
+
+/*Horisontell menyrad*/
+#menucontainer {
+  display: flex;  
+  width: 100%;
+}
+/*Varje box i menyn*/
+#menucontainer li {
+  flex: 1 1 auto; /*Gör så att alla objekten sprids ut och får lika mycket plats*/
+  list-style-type: none; /*Tar bort punkterna i menyn*/
+  text-align: left;
+  padding-left: 5%;
+  padding-bottom: 15px;
+  justify-content: center;
+  font-family: 'Catamaran', sans-serif;
+}
+/*Styling på länkarna i menyn*/
+#menucontainer a {
+  display: block; /*vi måste göra a-elementen till blocknivå-element med egenskapen display: block 
+  för att a-elementen ska uppföra sig som vi vill*/ 
+  text-decoration: none; /*Tar bort understrykningen på länkarna*/
+  color: black; /*Ändrar färg på länkarna från blåa till grå*/
+  padding: 6px 10px; /*Padding runt länkarna*/
+}
+/*menyalternativet för den sida man är på visas med underline*/
+#menucontainer .active {
+   text-decoration: underline 8px solid  #a7d4bc !important;
+}
+/*Underline visas under länkarna när musen dras över länken*/
+#menucontainer a:hover {
+   text-decoration: underline 8px solid  #a7d4bc;
+   color: #71A488;
+}
+
+/*Dropdown meny*/
+li.dropdown {
+   display: inline-block;
+ }
+ .dropdown-content {
+  display: none; /*Gör så att menyn inte syns från start*/
+  position: absolute; /*Absolute innebär att flexboxarna nedanför inte flyttar på sig utan "hoppar ned", utan lägger sig ovanpå.*/
+  background-color: #f9f9f9; /*Bakgrundsfärg på dropdown-box*/
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*Skugga bakom dropdown-boxen.*/
+  z-index: 1; /*Anger att den ska ligga överst. Högst z-index ligger överst.*/
+  padding: 10px;
+ }
+ .dropdown-content a:hover {
+    background-color: #f1f1f1; /*Bakgrundsfärg när musen drar över länken*/
+   }  
+ .dropdown:hover .dropdown-content {
+  display: block; /*Gör så att dropdown menyn visas när musen drar över länken*/
+ }
+
+ /*Responsiv meny. Om skärmen är mindre än 900px så läggs menylänkarna i en kolumn istället för rad*/
+/*Responsiv design för meny*/
+ 
+@media all and (max-width: 768px) {
+   /*Visa hamburgare */
+   #meny {
+       width: 100%;
+       background: #e4e3e3;
+   }
+   #meny label { 
+     display: inline-block; 
+     font-size: 150%;
+     padding: 5px 15px; 
+   }
+   
+   .dropdown-content {
+    text-align: left;
+    position: relative; 
+  }
+   /*Lägger länkarna horisontellt istället för vertikalt*/
+   #menucontainer a {
+     display: block;
+     width: 100%;
+     padding-left: 0%;
+     padding-bottom: 0px;
+   }
+   /*Växla mellan att visa och gömma menyn beroende på "iklickad" eller "urklickad" checkbox */
+   #menucontainer { 
+       display: none; 
+  } /*Den horisontella menyn göms*/
+   #meny input:checked ~ #menucontainer { 
+       display: block; 
+       background: #e4e3e3;
+      } 
+  }
+
+ /*CSS för footer*/
+ footer {
+   font-family:'Karla', sans-serif; ;
+	text-align: center;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   background-color: #cccc99;
+}
+/*Länkar i footer*/
+footer a {
+   text-decoration: none;
+   color: black;
+}
+/*Signatur i footer*/
+#signatur {
+   font-size: smaller;
+   color: #333;
+}
+#sensus {
+   font-size: smaller;
+   color: #333;
+}
+#line {
+   max-width: 200px;
+}
+
+
+
+
+/*CSS Hem-sidan--------------------------------------------------------------------------------------------------------------------*/
+/*Design Flexbox headercontainer*/
+.headercontainer {
+   display: flex; /*Anger att vi jobbar med flexbox*/
+   justify-content: space-between; /*Gör att de lägger sig på i varsin ände.*/
+   align-items: flex-start; /*Gör att items lägger sin i överkant*/
+}
+#engelsk a {
+   text-decoration: none; /*Tar bort understrykningen på länkarna*/
+   color:black; /*Ändrar färg på länkarna från blåa till grå*/
+}
+/*Byt färg på länkarna när musen dras över länken*/
+#engelsk a:hover {
+  font-weight: bolder;
+}
+/*Design Flexbox container*/
+.container {
+    display: flex; /*Anger att vi jobbar med flexbox*/
+    justify-content: center; /*items i containern lägger sig centrerat i mitten*/
+ }
+ /*Design flexbox items.*/
+.valkomstbild-box {
+   margin: 0px 0px 10px 0px;
+}
+.valkomstbild{
+   width: 100%;
+}
+/*Rad 1*/
+.valkommen /*Vi är Mara*/ {
+   flex: 1 1 40%; /*flex-grow flex-shrink flex-basis.*/
+   background-color: #ea676c; 
+   text-align: center;
+   padding: 2% 5% 2% 5%;
+}
+.valkomsttext {
+   flex: 1 1 60%;
+   padding: 30px 40px 30px 40px;
+   background-color: #ea676c; 
+}
+/*Rad 2*/
+.boka {
+   flex: 1 1 33%;
+   padding: 30px;
+   background-color: #6fc6f1; 
+   margin: 0px 0px 10px 0px;
+}
+.boka a {
+   text-decoration: none;
+   color: black;
+}
+.video {
+   flex: 1 1 34%;
+   background-color: #a7d4bc; 
+   margin: 0px 0px 10px 0px;
+   border: none;
+   width: 100%;
+}
+.iframe-container {
+   display: flex;
+   background-color: #a7d4bc;
+   align-items: center;
+   justify-content: center;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+.container-sociala-medier {
+   display: flex; 
+   /*flex-wrap: wrap; /*Gör att items i containern lägger sig under varandra, om nödvändigt.*/
+   justify-content: center;
+}
+.folj {
+   flex: 1 1 33%;
+   padding: 30px;
+   background-color: #f9f199;
+   margin: 0px 0px 10px 0px;  
+}
+.facebook {
+   flex: 1 1 20%;
+   padding: 5px;
+   background-color: #f9f199;
+}
+.instagram {
+   flex: 1 1 80%;
+   padding: 5px;
+   align-self: flex-start;
+   background-color: #f9f199;
+}
+.youtube {
+   padding: 5px;
+   background-color: #f9f199;
+}
+/*Responsiv design hem-sidan*/
+@media all and (max-width: 900px) {
+   .valkommen{
+      padding: 2% 5% 0% 5%;
+  }
+   .valkomsttext{
+      padding: 0px 40px 30px 40px;
+      margin-bottom: 10px;
+   }
+   .boka{
+      width: 100%;
+      margin: 0px 0px 10px 0px;
+      padding: 0px 30px 5px 30px;
+  }
+   .folj {
+      padding: 0px 30px 5px 30px;
+   }
+   .instagram {
+      align-self: center;
+   }
+   .flagga-eng, .flagga-sv {
+      width: 50%
+   }
+   #engelsk a {
+      font-size: 90%;
+   }
+}
+
+
+
+
+
+/*CSS Kören-sidan-------------------------------------------------------------------------------------------------------------------*/
+/*Första raden*/
+.historik {
+   flex: 1 1 60%;
+   padding: 30px;
+   background-color:#e9676c; 
+   margin: 0px 10px 10px 0px;
+}
+.historik a {
+   text-decoration: none;
+   color: #333; 
+   font-weight: bold;
+}
+
+.havet {
+   flex: 1 1 40%;
+   margin: 0px 0px 10px 0px;
+   background-color: #a7d4bc; 
+}
+.bild-container {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.bild-havet {
+   width: 100%;
+   height: 90%;   
+}
+/*Andra raden*/
+.container-stammor {
+   display: flex;
+   justify-content: center;
+}
+.sopran1 {
+   flex: 1 1 25%;
+   padding: 30px;
+   background-color:#faf199; 
+   margin: 0px 0px 10px 0px;
+}
+.sopran2 {
+   flex: 1 1 25%;
+   padding: 30px;
+   background-color:#6ec7f1; 
+   margin: 0px 00px 10px 0px;
+}
+.alt1 {
+   flex: 1 1 25%;
+   padding: 30px;
+   background-color:#a7d4bb; 
+   margin: 0px 0px 10px 0px;
+}
+.alt2 {
+   flex: 1 1 25%;
+   padding: 30px;
+   background-color: #f9cbcc; 
+   margin: 0px 0px 10px 0px;
+}
+/*Responsiv design för Kören-sidan*/
+@media all and (max-width: 900px){
+   .historik {
+      margin: 0 0 10px 0;
+      flex: 80%;
+   }
+   .havet {
+      flex: 20%;
+   }
+   .container-stammor {
+      flex-flow: wrap;
+   }
+   .sopran1 {
+      flex: 50%;
+      margin: 0;
+      text-align: center;
+
+   }
+   .sopran2 {
+      flex: 50%;
+      margin: 0;
+      text-align: center;
+   }
+   .alt1 {
+      flex: 50%;
+      text-align: center;
+   }
+   .alt2 {
+      flex: 50%;
+      text-align: center;
+   }
+}
+
+@media all and (max-width: 500px) {
+   .alt1, .alt2  {
+      margin-bottom: 0;
+   }
+}
+
+
+
+
+
+/*CSS Repertoar-sidan----------------------------------------------------------------------------------------------------------------*/
+.kolumn-container {
+   display: flex;
+   flex-direction: column;
+   width: 65%;
+}
+.snygga-arr {
+   padding: 30px;
+   background-color:#e9676c; 
+   margin: 0px 10px 10px 0px;
+}
+.repertoar {
+   width: 35%;
+   padding: 30px;
+   background-color: #a7d4bb; 
+   margin: 0px 0px 10px 0px;
+}
+.bild-box {
+   margin: 0px 10px 10px 0px;
+   height: 100%;
+   background-color: #f9cbcc; 
+}
+.bild-container2 {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.bild-zadar1 {
+   width: 90%;
+}
+/*Responsiv design Repertoar-sidan*/
+@media all and (max-width: 900px){
+   .kolumn-container{
+   flex-direction: row;
+   flex-flow: wrap;
+   width: 100%;
+   }
+   .snygga-arr {  
+      margin: 0 0 10px 0;
+   }
+   .repertoar {
+      width: 100%;
+   }
+   .bild-box {
+      width: 100%;
+      margin: 0px 0px 10px 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
+}
+
+
+
+
+
+
+/*CSS Fotogalleri-sidan--------------------------------------------------------------------------------------------------------------------*/
+
+/*Fotogalleri*/
+.gallerirubrik {
+   background-color: #a7d4bc; 
+   padding-left: 30px;
+   padding-right: 30px;
+   text-align: center;
+   width: 100%;
+}
+.galleri-rad {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 10px;
+   background-color:#a7d4bc; 
+   
+ }
+ /*Fyra kolumner som sitter bredvid varandra*/
+ .galleri-kolumn {
+   flex: 25%;
+   max-width: 25%;
+   padding: 5px 5px;
+   background-color: #a7d4bc; 
+   text-align: center;
+ 
+ }
+ .galleri-kolumn img {
+   vertical-align: middle;
+   width: 100%;
+   max-width: 300px;
+   margin-bottom: 10px;
+ }
+
+ /*Affisher*/
+.affischcontainer {
+   flex-direction: row;
+   display: flex;
+   flex-flow: wrap;
+   justify-content: center;
+   background-color:#faf199; 
+   margin-bottom: 10px;
+ }
+ /*Rubrik affisch*/
+.affischrubrik {
+   background-color:#faf199; 
+   padding-left: 30px;
+   padding-right: 30px;
+   width: 100%;
+   text-align: center;
+}
+.affischer {
+   width: 160px;
+   padding: 10px 5px;
+}
+/*Youtube-klipp*/
+.filmcontainer {
+  flex-direction: row;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  background-color: #6ec7f1;
+  margin: 10px 0px 0px 0px;
+}
+.videorubrik {
+   background-color:  #6ec7f1;
+   padding-left: 30px;
+   padding-right: 30px;
+   width: 100%;
+   text-align: center;
+}
+.film1 {
+   margin: 10px; 
+}
+.film2  {  
+   margin: 10px;
+}
+.film3 { 
+   margin: 10px;
+}
+.film4 {
+   margin: 10px;
+}
+.film5 {
+   margin: 10px;
+}
+.film6 {
+   margin: 10px;
+}
+
+/*Container sociala medier*/
+.socialamedier-container {
+   display: flex;
+   flex-flow: wrap;
+   justify-content: center;
+   background-color:  #e9676c;
+   margin-bottom: 10px;
+}
+
+/*Items sociala medier*/
+.logo-facebook {
+   padding: 10px;
+}
+.logo-instagram {
+   padding: 10px;
+}
+.logo-youtube {
+   padding: 10px;
+}
+
+ /* Responsive layout för Fotogalleri-sidan*/
+ /*Förändrar storleken på affischerna när skärmen blir mindre så att fler hoppar ner till nästa rad.*/
+ @media all and (max-width:505px) {
+   .affischer {
+      width: 160px;
+   }
+}
+ @media all and (max-width:1120px) {
+   .affischer {
+      width: 220px;
+   }
+ }
+ @media screen and (max-width: 900px) {
+   /*Skapar två istället för fyra columner i fotogalleriet*/
+   .galleri-kolumn { 
+     flex: 50%;
+     max-width: 50%;
+   }
+ }
+ /*Ställer de två kolumnerna över varandra istället för bredvid varandra*/
+ @media screen and (max-width: 600px) {
+   .gallery-column {
+     flex: 100%;
+     max-width: 100%;
+   }
+ }
+
+
+
+
+/*Konserter/Events-sidan------------------------------------------------------------------------------------------------------------*/
+.ljuskonsert-box {
+   margin: 0px 0px 10px 0px;
+}
+.ljuskonsert-bild {
+   width: 100%;
+}
+.aret-med-mara {
+   flex: 1 1 60%;
+   padding: 30px;
+   background-color:#e9676c; 
+   margin: 0px 0px 10px 0px;
+}
+.aret-med-mara a {
+   text-decoration: none;
+   color: #333; 
+   font-weight: bold;
+   font-size: 120%;
+}
+.kalender {
+   flex: 1 1 40%;
+   padding: 30px;
+   background-color:#a7d4bc; 
+   margin: 0px 0px 10px 0px;
+}
+
+
+
+
+
+
+
+/*Kontakt-sidan-----------------------------------------------------------------------------------------------------------------------*/
+.kontakt-container {
+   display: flex;
+   flex-direction: row;
+
+}
+.bild-box {
+   flex: 40%;
+   flex-flow: wrap;
+}
+.bild-container3 {
+   height: 100%;
+   display: flex;
+   background-color:#f9cbcc;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+.bild-hej {
+   width: 95%;
+}
+.formularbox {
+   flex: 60%;
+   padding: 30px;
+   background-color: #a7d4bb;
+   font-size: 100%;
+   font-family: 'Karla', sans-serif;
+}
+.epost {
+   flex: 1 1 50%;
+   margin-right: 20px;
+   text-align: left;
+}
+.telefon {
+   flex: 1 1 50%;
+   text-align: left;
+}   
+ /*Inmatningsboxarna*/
+label{
+   font-family: 'Karla', sans-serif;
+}
+select {
+   width: 50%;
+   padding: 10px 5px 10px 10px;
+   display: block;
+   border: 1px solid #ccc;
+   border-radius: 4px; /*Rundning av hörn*/
+   font-family: 'Karla', sans-serif;
+   font-size: 100%;
+   margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=date] {
+   width: 100%;
+   padding: 10px 5px 10px 10px;
+   display: block;
+   border: 1px solid #ccc;
+   border-radius: 4px; /*Rundning av hörn*/
+   font-size: 100%;
+   margin-bottom: 20px;
+   text-align: left;
+}
+input[type=date] {
+   width: 50%;}
+
+input[name=namn] {
+   width: 100%;
+   border: 1px solid #ccc;
+   border-radius: 4px; /*Rundning av hörn*/
+   font-size: 100%;
+   margin-bottom: 20px;
+}
+textarea {
+   width: 100%;
+   height: 150px;
+   padding: 10px 5px 10px 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-family: inherit;
+   font-size: 100%;
+   margin-bottom: 20px;
+   }
+input[type=submit]{
+   width: 150px;
+   padding: 10px;
+   border-radius: 10px;
+   font-family: inherit;
+   font-size: 100%;
+   background-color: darkcyan;
+   color: white;
+   float: right;
+}
+input[type=submit]:hover{
+   background-color:aquamarine;
+   font-weight: bold;
+   color: black;
+   cursor: pointer;
+}
+input:focus {
+   background-color:lightgrey;
+}
+textarea:focus {
+   background-color:lightgrey;
+}
+
+/*CSS för andra raden kontakt-sidan*/
+.adress {
+   flex: 1 1 40%;
+   padding: 30px;
+   background-color: #e9676c;
+   margin: 0px 0px 10px 0px;
+}
+.adress a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+.formularforklaring {
+   flex: 1 1 60%;
+   padding: 30px;
+   background-color: #f9f199;
+   margin: 0px 0px 10px 0px;
+}
+.formularforklaring a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+/*Responsiv design Kontakt-sidan*/
+@media all and (max-width: 900px) {
+   .kontakt-container { 
+        flex-direction: column-reverse; 
+        text-align: center;
+      }
+   .bild-container3{
+      margin: 0 0 10px 0;
+   }
+   .bild-hej{
+      width: 50%;
+   }
+   .formularbox {
+      text-align: left;
+      margin: 0 0 10px 0;
+   }
+   .epost {
+      margin-right: 0px;
+   }
+}

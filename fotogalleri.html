@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+ <html lang="sv">
+ <head>
+   <meta charset="utf-8">
+
+   <!--Koden nedan talar om för webbläsaren att enhetens skärmbredd ska 
+   användas och att sidan inte ska zoomas in när sidan laddas första gången.-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Länk till css-fil-->
+   <link rel="stylesheet" type="text/css" href="css_mara.css">
+   <!--Font rubriker google fonts-->
+   <link rel="preconnect" href="https://fonts.gstatic.com"> 
+   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800;900&display=swap" rel="stylesheet">
+    <!--Font body google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" 
+    rel="stylesheet">
+   <title>Fotogalleri - Mara Vokalensemble</title>  
+ </head>
+ <body>
+     <header>
+        <div>
+            <a href="index.html">
+               <img src="images/logga.png" alt="Logga Mara Vokalensemble" class="huvudlogga">
+            </a>
+        </div>
+     </header>
+     
+<!--Meny-->
+<nav id="meny">
+  <!-- [THE HAMBURGER] -->
+  <label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
+
+   <ul id="menucontainer">
+      <li><a href="index.html">Hem</a></li> <!--class=active: menyalternativet för den sida man är på visas med liten annan bakgrundsfärg-->
+      <li class="dropdown" >
+         <a href="javascript:void(0)" id="omoss-link">Om oss</a> <!--Säkerställer att sidan inte laddas om eller navigerar till annan sida.-->
+          <div class="dropdown-content">
+             <a href="koren.html" id="koren-link">Kören</a>
+             <a href="repertoar.html" id="repertoar-link">Repertoar</a>
+          </div></li>
+      <li><a href="fotogalleri.html" class="active">Fotogalleri</a></li>
+      <li><a href="konserter.html">Konserter/Events</a></li>
+      <li><a href="kontakt.html">Boka oss/Kontakt</a></li>
+   </ul>
+</nav>
+
+<!--Fotogrid-->
+<div class="galleri-rad">
+  <!--Rubrik galleri-->
+  <div class="gallerirubrik">
+    <h1>Fotogalleri</h1>
+  </div>
+<div class="galleri-kolumn">
+  <img src="images/galleri/masthugget.jpg" title="Sång med utsikt över Masthugget" alt="Mara sjunger på toppen av Masthugget" >
+  <img src="images/galleri/svartvit.jpg" title="Fotografering i Frälsningsarméns lokaler" alt="Gruppbild">
+  <img src="images/galleri/zadar2.jpg" title="Tävling i Zadar" alt="Gruppbild inför körtävling i Zadar">
+  <img src="images/galleri/tarnor.jpg" title="Tärnor efter luciatåg" alt="Gruppbild på tärnor efter luciatåg">
+  <img src="images/galleri/havet.jpg" title="Sommarhäng vid havet" alt="Gruppbild från sommarhäng vid havet">
+  <img src="images/galleri/ryggar.jpg" title="Våravslutning" alt="Gruppbild från en våravslutning">
+</div>
+<div class="galleri-kolumn">
+  <img src="images/galleri/nyamedlemmar.jpg" title="Nya medlemmar!" alt="Bild på nya medlemmar"/>
+  <img src="images/galleri/palmarum2.jpg" title="Konsert Palmarum" alt="Gruppbild från Maras konsert Palmarum">
+  <img src="images/galleri/palmarum.jpg" title="Konsert Palmarum" alt="Maras konsert Palmarum">
+  <img src="images/galleri/eggby.jpg" title="Körresa - På en brygga i Eggby" alt="Bild från körresa till Eggby">
+  <img src="images/galleri/eggby2.jpg" title="Körrep i Eggby kyrka" alt="Bild inifrån Eggby kyrka där Mara repar">
+  <img src="images/galleri/zadar1.jpg" title="Mara sjunger på ett torg i Zadar" alt="Mara sjunger på ett torg i centrala Zadar">
+  <img src="images/galleri/ljuskonsert.jpg" title="Ljuskonsert i S:t Jakobs kyrkna" alt="Bild från ljuskonsert i S:t Jakobs kyrka">    
+</div>
+<div class="galleri-kolumn">
+  <img src="images/galleri/soktillmara.jpg" title="Körresa - Tjörn" alt="Gruppbild från körresa på Tjörn">
+  <img src="images/galleri/brollop.jpg" title="Bröllopsgig i skogen" alt="Bild från bröllopsgig i skogen">
+  <img src="images/galleri/edo.jpg" title="Musikhjälpen med Edo Bumba" alt="Bild från uppträdande i Musikhjälpen tillsammans med Edo Bumba">
+  <img src="images/galleri/havet.jpg" title="Sommarhäng vid havet" alt="Gruppbild från sommarhäng vid havet">
+  <img src="images/galleri/hej.jpg" title="I väntan på rep i Amandas Teater" alt="Gruppbild utanför ingången till replokalen i Amandas teater">
+  <img src="images/galleri/ljuskonsert.jpg" title="Ljuskonsert i S:t Jakobs kyrkna" alt="Bild från ljuskonsert i S:t Jakobs kyrka">
+ 
+</div>
+<div class="galleri-kolumn">
+  <img src="images/galleri/palmarum.jpg" title="Konsert Palmarum" alt="Maras konsert Palmarum">
+  <img src="images/galleri/ryggar.jpg" title="Våravslutning" alt="Gruppbild från en våravslutning">
+  <img src="images/galleri/svartvit.jpg" title="Fotografering i Frälsningsarméns lokaler" alt="Gruppbild">
+  <img src="images/galleri/svartvit2.jpg" title="Vi är Mara!" alt="Gruppbild i svartvitt">
+  <img src="images/galleri/zadar2.jpg" title="Tävling i Zadar" alt="Gruppbild inför körtävling i Zadar">
+  <img src="images/galleri/hej.jpg" title="I väntan på rep i Amandas Teater" alt="Gruppbild utanför ingången till replokalen i Amandas teater">
+</div>
+</div>
+
+<!--Affischer-->
+<div class="affischcontainer">
+  <div class="affischrubrik">
+    <h2>Utvalda konsertaffischer</h2>
+  </div>
+  <div>
+    <img src="images/galleri/affish-ljuskonsert-2015-2.jpg" class="affischer" title="Ljuskonsert 2015" alt="Affisch från ljuskonsert 2015">
+  </div> 
+  <div>
+    <img src="images/galleri/affish-ljuskonsert-2016.jpg" class="affischer" title="Ljuskonsert 2016" alt="Affisch från ljuskonsert 2016">
+  </div> 
+  <div>
+    <img src="images/galleri/affish-ljuskonsert-2017.jpg" class="affischer" title="Ljuskonsert 2017" alt="Affisch från ljuskonsert 2017">
+  </div>
+  <div>
+    <img src="images/galleri/affish-ljuskonsert-2019.jpg" class="affischer" title="Ljuskonsert 2019" alt="Affisch från ljuskonsert 2019">
+  </div>
+  <div>
+    <img src="images/galleri/affish-varkraft-2017.jpg" class="affischer" title="Vårkraft 2017" alt="Affisch från Vårkraft 2017">
+  </div>
+  <div>
+    <img src="images/galleri/affish-varkraft-2018.jpg" class="affischer" title="Vårkraft 2018" alt="Affisch från Vårkraft 2018">
+  </div>
+</div>
+
+<!--Youtube-klipp-->
+<div class="filmcontainer">
+  <div class="videorubrik">
+    <h2>Videoklipp</h2> 
+  </div>
+  <div class="film1">
+    <iframe width="300" src="https://www.youtube.com/embed/Y1GJRyL1cjY" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+  </div>
+  <div class="film2">
+    <iframe width="300" src="https://www.youtube.com/embed/j1Nd7XOtCIA" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="film3">
+    <iframe width="300" src="https://www.youtube.com/embed/d2azi1JK94Y" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="film4">
+    <iframe width="300" src="https://www.youtube.com/embed/PpHfA5eM51g"  
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="film5">
+    <iframe width="300" src="https://www.youtube.com/embed/3-JgCxWm0F4" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="film6">
+    <iframe width="300" src="https://www.youtube.com/embed/ZHElmDOewas" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!--Länkar till sociala medier-->
+  <!--Ny container med sociala medier-länkar-->
+  <div class="socialamedier-container">
+     <div class="logo-facebook">
+        <a href="https://www.facebook.com/maravokalensemble" target="_blank">
+           <img src="images/facebook-logo.png" alt="Genväg till Maras Facebook">
+        </a>
+     </div>
+     <div class="logo-instagram">
+        <a href="https://www.instagram.com/maravokalensemble/" target="_blank">
+           <img src="images/instagram-logo.png" alt="Genväg till Maras Instagram">
+        </a>
+     </div>
+    <div class="logo-youtube">
+        <a href="https://www.youtube.com/channel/UC2TkiMb97JdWYj0rifrgBQw" target="_blank">
+          <img src="images/youtube-logo.png" alt="Genväg till Maras Youtube-kanal">
+        </a>
+    </div>
+  </div>
+
+
+<!--Footer-->
+  <footer>
+    <h2>Kontakt</h2>
+    <p><b>Mara Vokalensemble  |  <a href="mailto:maravokal@gmail.com">maravokal@gmail.com</a></b></p>
+    <hr id="line">
+    <br>
+    <a id="sensus" href="https://www.sensus.se/" target="_blank">Mara Vokalensemble är medlem i Studieforbundet Sensus</a> 
+    <br>
+    <p id="signatur">&copy; Pia Hagman 2021</p>
+  </footer>
+  </body>
+</html>

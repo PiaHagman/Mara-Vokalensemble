@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+ <html lang="sv">
+ <head>
+   <meta charset="utf-8">
+
+   <!--Koden nedan talar om för webbläsaren att enhetens skärmbredd ska 
+   användas och att sidan inte ska zoomas in när sidan laddas första gången.-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Länk till css-fil-->
+   <link rel="stylesheet" type="text/css" href="css_mara.css">
+   <!--Font rubriker google fonts-->
+   <link rel="preconnect" href="https://fonts.gstatic.com"> 
+   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800;900&display=swap" rel="stylesheet">
+    <!--Font body google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" 
+    rel="stylesheet">
+   
+   <title>Repertoar - Mara Vokalensemble</title>
+ </head>
+ <body>
+<!--Header byggd med flexbox-->
+     <header>
+        <div>
+           <a href="index.html">
+              <img src="images/logga.png" alt="Logga Mara Vokalensemble" class="huvudlogga">
+           </a>
+        </div>
+    </header>
+     
+<!--Meny-->
+<nav id="meny">
+  <!-- [THE HAMBURGER] -->
+  <label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
+
+   <ul id="menucontainer">
+      <li><a href="index.html">Hem</a></li> <!--class=active: menyalternativet för den sida man är på visas med liten annan bakgrundsfärg-->
+      <li class="dropdown" >
+         <a href="javascript:void(0)" id="omoss-link" class="active">Om oss</a> <!--Säkerställer att sidan inte laddas om eller navigerar till annan sida.-->
+          <div class="dropdown-content">
+             <a href="koren.html" id="koren-link">Kören</a>
+             <a href="repertoar.html" id="repertoar-link">Repertoar</a>
+          </div></li>
+      <li><a href="fotogalleri.html">Fotogalleri</a></li>
+      <li><a href="konserter.html">Konserter/Events</a></li>
+      <li><a href="kontakt.html">Boka oss/Kontakt</a></li>
+   </ul>
+</nav>
+
+<!--Flexbox container med items-->
+     <div class="container">
+       <!--Kolumn-->
+       <div class="kolumn-container">
+        <div class="snygga-arr">
+          <h1>Vi gillar svåra arr med snygga harmonier.</h1>
+          <p>Vår repertoar är som en påse lösgodis där var och en kan hitta något den gillar. Poplåtar och
+            modernare arrangemang varvas med traditionella visor och folkmusik. Kraftfulla låtar med massor av karaktär
+            liksom finstämda bitar med vackra harmonier. Som en brukar säga: Less is more. Ibland! Vi är inte rädda för det motsatta.  </p>
+          <p>Vi utökar och förändrar ständigt vår repertoar och har närmare ett hundratal stycken att välja mellan. 
+            Vi sjunger gärna på svenska och engelska. Men har också sjungit på både kroatiska och ungerska!  </p>
+         </div>
+        <!--Bild-->
+         <div class="bild-box">
+            <div class="bild-container2"> <!--En extra container för att kunna styra placeringen av bilden i bild-boxen-->
+              <img src="images/zadar1.jpg" alt="Bild av Mara som uppträder på ett torg i Zadar" class="bild-zadar1">
+            </div>
+         </div>
+       </div>
+       <!--Repertoar i urval-->
+       <div class="repertoar">
+          <h2>Repertoar i urval</h2>
+          <p><b>Frid på jord</b> <br>
+            <i>Text: Olivia Blyberg, Sofia Karlsson <br>
+              Musik: Sofia Karlsson</i></p>
+           
+          <p><b>Tystnaden</b> <br>
+            <i>Text och musik: Frida Johansson <br>
+              Arr: Kraja</i></p>  
+        
+          <p><b>Svatba</b> <br>
+            <i>Arr: Christo Tòdoror</i></p> 
+       
+          <p><b>Lord don’t move the mountain</b> <br>
+            <i>Text och musik: Doris Akers</i></p>
+         
+          <p><b>Chandelier</b> <br>
+            <i>Låtskrivare: Sia Furler / Jesse Shatkin <br>
+              Arr: Lotta Lindgren / Maja Lindgren /
+              Alice Jurström</i></p>
+      
+              <p><b>Frid på jord</b> <br>
+                <i>Text: Olivia Blyberg, Sofia Karlsson <br>
+                  Musik: Sofia Karlsson</i></p>
+               
+              <p><b>Tystnaden</b> <br>
+                <i>Text och musik: Frida Johansson <br>
+                  Arr: Kraja</i></p>  
+            
+              <p><b>Svatba</b> <br>
+                <i>Arr: Christo Tòdoror</i></p> 
+           
+              <p><b>Lord don’t move the mountain</b> <br>
+                <i>Text och musik: Doris Akers</i></p>
+             
+              <p><b>Chandelier</b> <br>
+                <i>Låtskrivare: Sia Furler / Jesse Shatkin <br>
+                  Arr: Lotta Lindgren / Maja Lindgren /
+                  Alice Jurström</i></p>
+        </div>
+     </div>
+
+<!--Footer-->
+<footer>
+  <h2>Kontakt</h2>
+  <p><b>Mara Vokalensemble  |  <a href="mailto:maravokal@gmail.com">maravokal@gmail.com</a></b></p>
+  <hr id="line">
+  <br>
+    <a id="sensus" href="https://www.sensus.se/" target="_blank">Mara Vokalensemble är medlem i Studieforbundet Sensus</a> 
+  <br>
+   <p id="signatur">&copy; Pia Hagman 2021</p>
+</footer>
+</body>
+</html>
